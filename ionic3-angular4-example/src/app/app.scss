@@ -1,0 +1,47 @@
+
+.mask-overlay {
+  position: absolute;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  pointer-events: none;
+  display: none;
+}
+
+.input-has-value {
+  .mask-overlay {
+    display: block;
+  }
+  .masked {
+    input {
+      color: transparent;
+      font-size: 0;
+      height: 20px;
+    }
+  }
+}
+
+.input-has-focus {
+  .mask-overlay:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 21px;
+    background: #000000;
+    -webkit-animation: flash step-end 1s infinite;
+    animation: flash step-end 1s infinite;
+  }
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+
+  }
+}
+

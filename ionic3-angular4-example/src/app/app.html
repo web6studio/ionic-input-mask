@@ -1,0 +1,13 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Masked Input Example</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <!--Phone-->
+    <ion-item>
+        <ion-label floating>Mobile Number*</ion-label>
+        <ion-input type="tel" class="masked" name="phone" [(ngModel)]="phone" maxlength="10" mask="(***)***-****"></ion-input>
+    </ion-item>
+</ion-content>
